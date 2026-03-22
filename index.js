@@ -40,6 +40,7 @@ console.log('');
 
 let installed = 0;
 let skipped = 0;
+let errors = 0;
 
 for (const file of FRAMEWORK_FILES) {
   const src = path.join(srcDir, file);
@@ -57,12 +58,16 @@ for (const file of FRAMEWORK_FILES) {
     installed++;
   } catch (err) {
     console.error('  ERROR ' + file + ': ' + err.message);
-    process.exit(1);
+    errors++;
   }
 }
 
 console.log('');
-console.log('Done! ' + installed + ' file(s) installed, ' + skipped + ' skipped.');
+console.log('Done! ' + installed + ' file(s) installed, ' + skipped + ' skipped' + (errors > 0 ? ', ' + errors + ' error(s).' : '.'));
+
+if (errors > 0) {
+  process.exit(1);
+}
 console.log('');
 console.log('Next steps:');
 console.log('  1. Attach these 4 files to your AI session:');
