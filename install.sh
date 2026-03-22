@@ -54,6 +54,7 @@ for file in "${FRAMEWORK_FILES[@]}"; do
   else
     # Download from GitHub
     if ! curl -fsSL "${BASE_URL}/${file}" -o "${dest}"; then
+      rm -f "${dest}"
       echo "  ERROR ${file} (download failed)"
       exit 1
     fi
@@ -72,6 +73,7 @@ echo "       AGENTS.md"
 echo "       ACTIVATION_PROMPT.md"
 echo "       FEATURE_INDEX.md"
 echo "       MODULE_MANIFEST_TEMPLATE.md"
+echo "     (DEBT_LEDGER.md and REGRESSION_INDEX.md are populated by the agent after bootstrap)"
 echo "  2. Copy the Bootstrap Activation Prompt from ACTIVATION_PROMPT.md"
 echo "  3. Paste it into your AI session — the agent will scan and bootstrap your project"
 echo ""
