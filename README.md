@@ -91,7 +91,7 @@ After bootstrap, the agent maintains these files across every session:
 - `FEATURE_INDEX.md`
 - `MODULE_MANIFEST_TEMPLATE.md`
 
-**Step 3** — Copy the **Bootstrap Activation Prompt** from `ACTIVATION_PROMPT.md` (between the `===ACTIVATION PROMPT===` markers) and paste it into your session.
+**Step 3** — Copy the **Bootstrap Activation Prompt** from `ACTIVATION_PROMPT.md` (look for the `===ACTIVATION PROMPT (copy from here)===` line) and paste it into your session.
 
 **Step 4** — The agent scans your project and creates all navigation files automatically.
 

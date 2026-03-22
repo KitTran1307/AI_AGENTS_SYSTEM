@@ -70,7 +70,7 @@ The bootstrap takes 2–5 minutes depending on codebase size.
    - `CHANGELOG.md`
 
 2. **Copy the Subsequent Session Prompt** from `ACTIVATION_PROMPT.md`
-   (between the `===SUBSEQUENT SESSION PROMPT===` markers)
+   (look for the `===SUBSEQUENT SESSION PROMPT (copy from here)===` line)
 
 3. **Paste it**, then give the agent your task.
 
