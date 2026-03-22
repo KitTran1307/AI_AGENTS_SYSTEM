@@ -1,0 +1,45 @@
+{
+  "name": "kitai-ai-agents-system-framework",
+  "version": "1.0.0",
+  "description": "Universal AI Agent governance framework — structure, context, and discipline for AI coding assistants on any codebase",
+  "main": "index.js",
+  "bin": {
+    "kitai-ai-agents-system-framework": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "AGENTS.md",
+    "ACTIVATION_PROMPT.md",
+    "FEATURE_INDEX.md",
+    "MODULE_MANIFEST_TEMPLATE.md",
+    "DEBT_LEDGER.md",
+    "REGRESSION_INDEX.md"
+  ],
+  "scripts": {
+    "test": "node test/install.test.js"
+  },
+  "keywords": [
+    "ai-agents",
+    "developer-tools",
+    "claude",
+    "cursor",
+    "copilot",
+    "antigravity",
+    "framework",
+    "coding-assistant",
+    "llm"
+  ],
+  "author": "[OWNER]",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/[OWNER]/kitai-ai-agents-system-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/[OWNER]/kitai-ai-agents-system-framework/issues"
+  },
+  "homepage": "https://github.com/[OWNER]/kitai-ai-agents-system-framework#readme"
+}
