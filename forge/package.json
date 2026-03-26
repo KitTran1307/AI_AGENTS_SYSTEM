@@ -1,0 +1,36 @@
+{
+  "name": "kitai-forge",
+  "version": "2.0.0-alpha.1",
+  "description": "AI agent framework with adaptive ceremony — context graph, agent personas, multi-model orchestration",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "forge": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit && vitest run"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": ["ai", "agent", "framework", "claude", "llm", "orchestration"],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "tsup": "^8.4.0",
+    "vitest": "^3.1.0",
+    "@types/node": "^22.0.0"
+  },
+  "dependencies": {
+    "zod": "^3.24.0",
+    "commander": "^13.1.0",
+    "gray-matter": "^4.0.3",
+    "yaml": "^2.7.0"
+  }
+}
