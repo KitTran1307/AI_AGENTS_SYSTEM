@@ -1,0 +1,37 @@
+project:
+  name: "test-project"
+  description: "A test project for config loader tests"
+  language: "typescript"
+  framework: "nextjs"
+
+personas:
+  enabled:
+    - analyst
+    - architect
+    - developer
+    - reviewer
+
+models:
+  default_provider: "anthropic"
+  routing:
+    expensive:
+      provider: "anthropic"
+      model: "claude-opus-4-6"
+    moderate:
+      provider: "anthropic"
+      model: "claude-sonnet-4-6"
+    cheap:
+      provider: "anthropic"
+      model: "claude-haiku-4-5"
+
+orchestration:
+  max_parallel_agents: 3
+  circuit_breaker_threshold: 3
+  loop_detection: true
+  auto_delegate: true
+
+quality:
+  enforce_gates: true
+  required_gates:
+    - story-ready
+    - code-complete
