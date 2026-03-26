@@ -1,2 +1,2 @@
-// Graph module - populated by subsequent tasks
-export {};
+export * from './types.js';
+export * from './schema.js';
