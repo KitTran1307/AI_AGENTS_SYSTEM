@@ -1,6 +1,7 @@
 // forge/src/cli/commands/init.ts
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { stringify } from 'yaml';
 import { NODE_TYPE_DIRS } from '../../core/graph/types.js';
 import { success, info } from '../util/display.js';
@@ -53,9 +54,38 @@ export async function execInit(projectDir: string, opts: InitOptions): Promise<v
   const gitignorePath = path.join(forgeDir, '.gitignore');
   await fs.writeFile(gitignorePath, 'config/providers.yaml\nconfig/*.local.yaml\n', 'utf-8');
 
+  // Copy persona definitions
+  const personasDir = path.join(forgeDir, 'personas');
+  await fs.mkdir(personasDir, { recursive: true });
+
+  // Resolve the bundled personas directory
+  const thisFile = fileURLToPath(import.meta.url);
+  const forgeRoot = path.resolve(path.dirname(thisFile), '..', '..', '..');
+  const bundledPersonas = path.join(forgeRoot, 'personas');
+
+  // Always include forge-orchestrator
+  const personasToCopy = new Set([...opts.personas, 'forge-orchestrator']);
+
+  for (const personaName of personasToCopy) {
+    const srcDir = path.join(bundledPersonas, personaName);
+    const destDir = path.join(personasDir, personaName);
+    try {
+      await fs.access(srcDir);
+      await fs.mkdir(destDir, { recursive: true });
+      const files = await fs.readdir(srcDir);
+      for (const file of files) {
+        await fs.copyFile(path.join(srcDir, file), path.join(destDir, file));
+      }
+    } catch {
+      // Skip personas that don't exist in bundled set
+      continue;
+    }
+  }
+
   console.log(success(`Initialized KitAI Forge in ${forgeDir}`));
   console.log(info(`Config: ${configPath}`));
   console.log(info(`Graph: ${graphDir} (${Object.keys(NODE_TYPE_DIRS).length} node type directories)`));
+  console.log(info(`Personas: ${[...personasToCopy].join(', ')}`));
 }
 
 function getDefaultModel(provider: string, tier: string): string {
