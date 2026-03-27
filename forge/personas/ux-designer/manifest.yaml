@@ -1,0 +1,30 @@
+name: ux-designer
+displayName: Sage
+title: UX Designer
+icon: "🎨"
+category: planning
+produces:
+  - ux-spec
+consumes:
+  - prd
+  - brief
+model_preference:
+  primary: sonnet
+  fallback: [opus]
+  budget: moderate
+temperature: 0.5
+capabilities:
+  - user-flow-design
+  - wireframing
+  - interaction-patterns
+  - accessibility
+  - information-architecture
+delegation_triggers:
+  - design the user experience
+  - create user flows
+  - how should users interact
+  - design the interface
+avoid_when:
+  - write the code
+  - fix this bug
+  - design the system architecture

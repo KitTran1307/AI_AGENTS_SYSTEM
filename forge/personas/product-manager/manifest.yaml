@@ -1,0 +1,32 @@
+name: product-manager
+displayName: Jordan
+title: Product Manager
+icon: "📋"
+category: planning
+produces:
+  - prd
+consumes:
+  - brief
+model_preference:
+  primary: opus
+  fallback: [sonnet]
+  budget: expensive
+temperature: 0.3
+max_thinking_tokens: 32768
+capabilities:
+  - requirements-discovery
+  - user-story-writing
+  - prioritization
+  - success-metrics
+  - stakeholder-alignment
+delegation_triggers:
+  - create requirements
+  - write a prd
+  - define the product
+  - what should we build
+  - prioritize features
+avoid_when:
+  - write the code
+  - design the system architecture
+  - fix this bug
+  - run tests

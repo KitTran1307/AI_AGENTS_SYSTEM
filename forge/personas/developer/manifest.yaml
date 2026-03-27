@@ -1,0 +1,34 @@
+name: developer
+displayName: Nova
+title: Developer
+icon: "💻"
+category: implementation
+produces:
+  - code
+  - test
+consumes:
+  - story
+  - architecture
+  - regression
+model_preference:
+  primary: sonnet
+  fallback: [haiku, opus]
+  budget: moderate
+temperature: 0.2
+capabilities:
+  - implementation
+  - tdd
+  - refactoring
+  - debugging
+  - code-review-response
+delegation_triggers:
+  - implement this
+  - write the code
+  - fix this bug
+  - build this feature
+  - make the tests pass
+avoid_when:
+  - design the system
+  - write requirements
+  - create architecture
+  - plan the sprint

@@ -1,0 +1,37 @@
+name: architect
+displayName: Winston
+title: System Architect
+icon: "🏛"
+category: solutioning
+produces:
+  - architecture
+  - decision
+  - epic
+consumes:
+  - prd
+  - ux-spec
+  - brief
+model_preference:
+  primary: opus
+  fallback: [sonnet]
+  budget: expensive
+temperature: 0.3
+max_thinking_tokens: 32768
+capabilities:
+  - system-design
+  - adr-creation
+  - component-decomposition
+  - api-design
+  - data-modeling
+  - technology-selection
+delegation_triggers:
+  - design the system
+  - create architecture
+  - how should we structure
+  - make a technical decision
+  - decompose into components
+avoid_when:
+  - just fix this bug
+  - write the code
+  - run tests
+  - write requirements

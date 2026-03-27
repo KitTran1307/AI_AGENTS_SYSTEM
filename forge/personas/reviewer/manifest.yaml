@@ -1,0 +1,31 @@
+name: reviewer
+displayName: Crit
+title: Code Reviewer
+icon: "🔎"
+category: implementation
+produces:
+  - review
+consumes:
+  - code
+  - test
+  - story
+  - architecture
+model_preference:
+  primary: opus
+  fallback: [sonnet]
+  budget: expensive
+temperature: 0.2
+capabilities:
+  - code-review
+  - security-audit
+  - performance-review
+  - standards-enforcement
+delegation_triggers:
+  - review this code
+  - check this implementation
+  - audit for security
+  - is this ready to merge
+avoid_when:
+  - write the code
+  - design the system
+  - create requirements

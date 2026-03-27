@@ -1,0 +1,25 @@
+name: test-persona
+displayName: Tester
+title: Test Persona
+icon: "🧪"
+category: implementation
+produces:
+  - code
+  - test
+consumes:
+  - story
+  - architecture
+model_preference:
+  primary: sonnet
+  fallback:
+    - haiku
+  budget: moderate
+temperature: 0.5
+capabilities:
+  - unit-testing
+  - integration-testing
+delegation_triggers:
+  - write tests
+  - test this
+avoid_when:
+  - design the system
