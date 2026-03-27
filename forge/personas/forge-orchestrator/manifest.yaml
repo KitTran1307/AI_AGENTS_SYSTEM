@@ -1,0 +1,41 @@
+name: forge-orchestrator
+displayName: Forge
+title: Orchestrator
+icon: "⚡"
+category: orchestration
+produces:
+  - epic
+  - decision
+consumes:
+  - brief
+  - prd
+  - ux-spec
+  - architecture
+  - epic
+  - story
+  - code
+  - test
+  - review
+  - regression
+  - debt
+  - decision
+model_preference:
+  primary: opus
+  fallback: [sonnet]
+  budget: expensive
+temperature: 0.3
+max_thinking_tokens: 32768
+capabilities:
+  - intent-classification
+  - task-routing
+  - delegation
+  - progress-monitoring
+  - quality-gate-enforcement
+  - parallel-coordination
+delegation_triggers:
+  - forge
+  - orchestrate
+  - coordinate
+  - what should we do next
+  - plan this work
+avoid_when: []

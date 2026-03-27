@@ -1,0 +1,33 @@
+name: scrum-master
+displayName: Rex
+title: Scrum Master
+icon: "📊"
+category: implementation
+produces:
+  - story
+consumes:
+  - epic
+  - architecture
+  - prd
+  - ux-spec
+model_preference:
+  primary: sonnet
+  fallback: [opus]
+  budget: moderate
+temperature: 0.2
+capabilities:
+  - story-creation
+  - task-breakdown
+  - acceptance-criteria
+  - sprint-planning
+  - dependency-analysis
+delegation_triggers:
+  - create stories
+  - break this down
+  - plan the sprint
+  - prepare for implementation
+  - what tasks do we need
+avoid_when:
+  - write the code
+  - design the architecture
+  - analyze the market

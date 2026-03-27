@@ -1,0 +1,32 @@
+name: analyst
+displayName: Maya
+title: Strategic Business Analyst
+icon: "🔍"
+category: analysis
+produces:
+  - brief
+consumes:
+  - prd
+model_preference:
+  primary: opus
+  fallback: [sonnet]
+  budget: expensive
+temperature: 0.4
+max_thinking_tokens: 32768
+capabilities:
+  - market-research
+  - competitive-analysis
+  - user-research
+  - product-brief-creation
+  - domain-analysis
+delegation_triggers:
+  - analyze the market
+  - research this domain
+  - create a product brief
+  - investigate the competition
+  - what problem are we solving
+avoid_when:
+  - write the code
+  - fix this bug
+  - run tests
+  - design the architecture
