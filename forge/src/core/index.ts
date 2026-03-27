@@ -4,3 +4,4 @@ export * from './personas/index.js';
 export * from './orchestrator/index.js';
 export * from './quality/index.js';
 export * from './sprint/index.js';
+export * from './session/index.js';
