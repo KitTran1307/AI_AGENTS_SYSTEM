@@ -4,7 +4,6 @@
 > context-aware engineering partner.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/kitai-ai-agents-system-framework?color=blue)](https://www.npmjs.com/package/kitai-ai-agents-system-framework)
 
 ---
 
@@ -21,20 +20,12 @@
 
 ## Install
 
-**Option 1 — GitHub Template** *(new projects)*
-
-Click **"Use this template"** above — all files land in your new repo.
-
-**Option 2 — npx** *(add to an existing project)*
+Clone this repository once, then run the installer from the root of the project you want to equip. It copies the framework files into the current directory:
 
 ```bash
-npx kitai-ai-agents-system-framework init
-```
-
-**Option 3 — curl** *(shell environments, macOS/Linux)*
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/[OWNER]/kitai-ai-agents-system-framework/main/install.sh | bash
+git clone https://github.com/KitTran1307/AI_AGENTS_SYSTEM.git
+cd /path/to/your-project
+bash /path/to/AI_AGENTS_SYSTEM/install.sh
 ```
 
 Use `--force` to overwrite existing files.
