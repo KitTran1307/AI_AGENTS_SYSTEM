@@ -1,7 +1,6 @@
-# kitai-ai-agents-system-framework
+# AI Agents System
 
-> A universal governance framework that turns any AI coding assistant into a disciplined,
-> context-aware engineering partner.
+> Rules and an installer that make AI coding assistants plan, test and review their work before it ships.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
